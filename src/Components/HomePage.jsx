@@ -4,7 +4,7 @@ import whiteModeImage from "../assets/Logo-whiteMode.png"
 
 const HomePage = () => {
   return (
-    <div className='h-[calc(100vh-4rem)] bg-gray-50 flex justify-center items-center'>
+    <div className='min-h-screen bg-gray-50 flex justify-center items-center pt-24 md:pt-16'>
     <div className='bg-transparent w-4/5 h-1/2 grid grid-cols-1 md:grid-cols-2 -mt-10'>
       {/* First Grid Item */}
       <div className='flex justify-center items-center'>

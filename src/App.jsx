@@ -12,6 +12,7 @@ const App = () => {
     <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/Docs" element={<Docs />} />
+    <Route path="*" element={<HomePage />} /> {/* add not found page */} 
     </Routes>
     </>
   );
