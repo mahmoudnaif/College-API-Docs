@@ -1,0 +1,406 @@
+[
+{
+"method": "Get",
+"endpoint":"/get/test",
+"title": "get students data from the db",
+"queryParameters": {
+"take": 0,
+"skip":0
+},
+"requestBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+},
+"responseBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+}
+},{
+"method": "Get",
+"endpoint":"/get/test",
+"title": "get students data from the db",
+"queryParameters": {
+"take": 0,
+"skip":0
+},
+"note":"You can check"
+
+,
+"requestBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+},
+"responseBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+}
+},{
+"method": "Get",
+"endpoint":"/get/test",
+"title": "get students data from the db",
+"queryParameters": {
+"take": 0,
+"skip":0
+},
+"requestBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+},
+"responseBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+}
+},{
+"method": "Get",
+"endpoint":"/get/test",
+"title": "get students data from the db",
+"queryParameters": null,
+"requestBody": null,
+"responseBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+}
+},{
+    "method": "Get",
+    "endpoint":"/get/test",
+    "title": "get students data from the db",
+    "queryParameters": {
+    "take": 0,
+    "skip":0
+    },
+    "requestBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+},
+    "responseBody":{
+  "content": [
+    {
+      "id": 1,
+      "name": "Portátil Apple MacBook Pro",
+      "description": "Portátil de alto rendimiento con pantalla Retina de 13 pulgadas, chip Apple M1, 8 GB de RAM y 256 GB de SSD.",
+      "price": 1299.99,
+      "stockQuantity": 75,
+      "categoryName": "Electrónica",
+      "imageUrl": "https://i.ibb.co/cDj3dpX/Apple-Mac-Book-Pro.png",
+      "createdAt": "2023-12-29",
+      "updatedAt": "2023-12-29"
+    }
+  ],
+  "pageable": {
+    "pageNumber": 0,
+    "pageSize": 5,
+    "sort": {
+      "empty": true,
+      "sorted": false,
+      "unsorted": true
+    },
+    "offset": 0,
+    "paged": true,
+    "unpaged": false
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 5,
+  "number": 0,
+  "sort": {
+    "empty": true,
+    "sorted": false,
+    "unsorted": true
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+}
+    }
+
+
+]
