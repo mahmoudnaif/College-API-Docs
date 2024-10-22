@@ -12,7 +12,7 @@ const Docs = () => {
     const fetchData = async () => {
       try {
         // const response = await fetch(`src/assets/JSONData/${data[activeSec-1].json}`);
-        const response = await fetch(`src/assets/JSONData/test.json`);
+        const response = await fetch(`src/assets/JSONData/${data[activeSec-1]}.json`);
         console.log(`src/assets/JSONData/${data[activeSec-1]}`)
         const result = await response.json();
         console.log(result)

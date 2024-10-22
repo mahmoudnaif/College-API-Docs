@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { CiMenuBurger } from "react-icons/ci";
 const NavBar = () => {
   return (
         <div className='z-10 fixed flex justify-between items-center p-4 flex-wrap bg-gray-800 h-16 w-screen text-white shadow-md'>

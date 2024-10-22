@@ -8,12 +8,17 @@ const GettingStarted = ({setactiveSection}) => {
   const cloneRepo = 'git clone https://github.com/mahmoudnaif/College-management-system.git';
   const installRedis ='sudo apt-get install redis'
   const runRedis= 'sudo service redis-server start'
+
+  const handleNext = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setactiveSection(1);
+  };
   return (
     
-    <div  className= "w-full md:w-[75%] bg-slate-300  p-4 text-base md:text-xl ">
+    <div  className= "w-full md:w-[75%] bg-slate-300  p-4   ">
       
      <div className='container pl-5 md:pl-14 pt-5 md:pt-10 pr-4 '>
-      <h1 className='text-lg md:text-5xl '>Introduction</h1>
+      <h1 className='text-lg md:text-4xl '>Introduction</h1>
       <hr className='border-t border-red-300 -mx-8 md:-mx-16 my-4'/>
       <p >Welcome to the College Management System API, designed to streamline and optimize the management of student, faculty, and course data for educational institutions. This API provides efficient and scalable tools to handle essential tasks such as student enrollment, course assignments, grade tracking, and faculty management, all through secure and standard HTTP requests. Built using ASP.NET Core, the API seamlessly integrates with web frontends, providing users with easy access to academic records, schedules, and administrative functions. With role-based access control, the system ensures that students, professors, teaching assistants, and administrators have appropriate permissions to perform their respective tasks. It also incorporates advanced features like transaction handling, schedule management, and performance optimization for a fast and reliable experience. Whether you're an administrator overseeing multiple departments or a professor managing courses and grades, this API offers a comprehensive solution tailored to meet the needs of modern educational institutions.</p>
       <hr className='border-t border-red-300 -mx-8 md:-mx-16  my-4'/>
@@ -21,7 +26,7 @@ const GettingStarted = ({setactiveSection}) => {
 
 
       <div className='container pl-5 md:pl-14 pt-2 md:pt-4 pr-4 '>
-      <h1 className=' text-lg md:text-5xl  '>prerequisites</h1>
+      <h1 className=' text-lg md:text-4xl  '>prerequisites</h1>
       <hr className='border-t border-red-300 -mx-8  md:-mx-16 my-4'/>
       <ul className="list-disc">
         <li className='pb-3'>
@@ -39,7 +44,7 @@ const GettingStarted = ({setactiveSection}) => {
        </div>
 
        <div className='container pl-5 md:pl-14 pt-2 md:pt-4 pr-4 '>
-      <h1 className=' text-lg md:text-5xl'>Getting started</h1>
+      <h1 className=' text-lg md:text-4xl'>Getting started</h1>
       <hr className='border-t border-red-300 -mx-8 md:-mx-16 my-4'/>
       <ul className="list-disc">
         <li className='pb-5'>
@@ -82,7 +87,7 @@ const GettingStarted = ({setactiveSection}) => {
        <div className=' pl-5 md:pl-14 pt-2 md:pt-4 pr-4 flex  flex-col md:flex-row justify-between'>
          <p className='pb-3 md:pb-0'> Great! now you are ready to start using the API and show us your amazing front-end skills!</p>
          <span className='flex justify-center '>
-          <button onClick ={() => setactiveSection(1)}className='bg-slate-500 w-14'>Next</button>
+          <button onClick ={handleNext} className='bg-slate-500 w-14'>Next</button>
         </span>
        </div>
 
