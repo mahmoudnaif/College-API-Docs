@@ -4,10 +4,35 @@ import GettingStarted from './GettingStarted';
 import data from "../assets/JSONData/Controllers.json";
 import APIDoc from './ApiDocsSection';
 
-const Docs = () => {
+const Docs = ({openSideBar,setOpenSideBar}) => {
   const [activeSec,setactiveSection] = useState(0);
   const [apiDocs,setApiDocs] = useState([]);
   
+
+  const isDesktop = () => window.innerWidth >= 768;
+
+  useEffect(() => {
+    // Function to handle the resize event
+    const handleResize = () => {
+      if (isDesktop()) {
+        setOpenSideBar(true); // Show sidebar when transitioning to desktop
+      } else {
+        setOpenSideBar(false); // Hide sidebar when transitioning to mobile
+      }
+    };
+
+    // Add the resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Trigger the handler on initial render to set correct state
+    handleResize(); 
+
+    // Cleanup event listener when component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,8 +54,8 @@ const Docs = () => {
 
   return (
 <>
-    <SideBar activeSec={activeSec} setactiveSection={setactiveSection} data={data}/>
-    <div className='flex min-h-screen pt-16 pl-[20%] '>
+{  openSideBar && <SideBar activeSec={activeSec} setactiveSection={setactiveSection} data={data} setOpenSideBar={setOpenSideBar}/>}
+    <div className='flex min-h-screen pt-16 md:pl-[20%]  '>
     {activeSec == 0 &&  <GettingStarted setactiveSection={setactiveSection}/>}
     {activeSec != 0 && <APIDoc apiDocs = {apiDocs} />}
 

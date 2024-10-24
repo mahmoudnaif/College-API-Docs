@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { CiMenuBurger } from "react-icons/ci";
-const NavBar = () => {
+const NavBar = ({setOpenSideBar}) => {
+    
   return (
-        <div className='z-10 fixed flex justify-between items-center p-4 flex-wrap bg-gray-800 h-16 w-screen text-white shadow-md'>
-            <div className='hidden md:block'>
-                <h1>College managment API Docs</h1>
+        <div className=' px-10 z-20 fixed flex justify-between items-center p-4 flex-wrap bg-gray-800 h-16 w-screen text-white shadow-md'>
+           
+            <div className="md:hidden cursor-pointer ">
+                    <CiMenuBurger size={30} onClick={()=>setOpenSideBar(prev=>!prev)} />
             </div>
             <div>
                 <ul className='flex justify-center items-center'>
@@ -21,6 +23,10 @@ const NavBar = () => {
                 </Link>
                 </ul>
             </div>
+            <div className='hidden md:block'>
+                <h1>College managment API Docs</h1>
+            </div>
+           
         </div>
 
 
