@@ -4,7 +4,7 @@ import GettingStarted from './GettingStarted';
 import data from "../assets/JSONData/Controllers.json";
 import APIDoc from './ApiDocsSection';
 
-const Docs = ({openSideBar,setOpenSideBar}) => {
+const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
   const [activeSec,setactiveSection] = useState(0);
   const [apiDocs,setApiDocs] = useState([]);
   
@@ -57,9 +57,9 @@ const Docs = ({openSideBar,setOpenSideBar}) => {
 {  openSideBar && <SideBar activeSec={activeSec} setactiveSection={setactiveSection} data={data} setOpenSideBar={setOpenSideBar}/>}
     <div className='flex min-h-screen pt-16 md:pl-[20%]  '>
     {activeSec == 0 &&  <GettingStarted setactiveSection={setactiveSection}/>}
-    {activeSec != 0 && <APIDoc apiDocs = {apiDocs} />}
+    {activeSec != 0 && <APIDoc apiDocs = {apiDocs} darkmode={darkmode} />}
 
-      <div className='hidden md:block md:w-[25%]  bg-black'></div>
+      <div className='hidden md:block md:w-[25%]  bg-black '></div>
     </div> 
 </>
   )

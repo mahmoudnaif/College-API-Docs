@@ -4,7 +4,7 @@ import { CiMenuBurger } from "react-icons/ci";
 const NavBar = ({setOpenSideBar}) => {
     
   return (
-        <div className=' px-10 z-20 fixed flex justify-between items-center p-4 flex-wrap bg-gray-800 h-16 w-screen text-white shadow-md'>
+        <div className='px-10 z-20 fixed flex justify-between items-center p-4 flex-wrap bg-headerWhite dark:bg-headerDark h-16 w-screen shadow-md'>
            
             <div className="md:hidden cursor-pointer ">
                     <CiMenuBurger size={30} onClick={()=>setOpenSideBar(prev=>!prev)} />
