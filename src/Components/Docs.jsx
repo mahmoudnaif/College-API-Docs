@@ -49,6 +49,10 @@ const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
     if (activeSec === 0) {
       return;
     }
+    if(activeSec > data.length){
+      setactiveSection(0)
+      return;
+    }
     fetchData();
   }, [activeSec]); 
 
@@ -56,8 +60,8 @@ const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
 <>
 {  openSideBar && <SideBar activeSec={activeSec} setactiveSection={setactiveSection} data={data} setOpenSideBar={setOpenSideBar}/>}
     <div className='flex min-h-screen pt-16 md:pl-[20%]  '>
-    {activeSec == 0 &&  <GettingStarted setactiveSection={setactiveSection}/>}
-    {activeSec != 0 && <APIDoc apiDocs = {apiDocs} darkmode={darkmode} />}
+    {activeSec == 0 &&  <GettingStarted setactiveSection={setactiveSection} darkmode={darkmode} />}
+    {activeSec != 0 && <APIDoc apiDocs = {apiDocs} darkmode={darkmode} setactiveSection={setactiveSection} />}
 
       <div className='hidden md:block md:w-[25%]  bg-black '></div>
     </div> 

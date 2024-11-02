@@ -38,7 +38,7 @@ const APIDocBlock = ({doc,darkmode}) => {
     }
 
   return (
-    <> <div className="container pl-5 md:pl-14 pb-10 md: pr-4">
+    <> <div className="container  pb-10  pt-5">
     <h1 className="text-xl md:text-3xl pb-7">{doc.title}</h1>
     <div className='pb-7'>
       <p className=' md:text-2xl pb-5'>Endpoint</p>

@@ -3,7 +3,7 @@ import CodeSnippet from './CodeSnippet'
 import connectionStringImage from '../assets/images/ConnectionStringConfig.png'
 import redis_ip from '../assets/images/redisIp.png'
 import changeRedisIp from '../assets/images/ChangeIpReds.png' 
-const GettingStarted = ({setactiveSection}) => {
+const GettingStarted = ({setactiveSection,darkmode}) => {
 
   const cloneRepo = 'git clone https://github.com/mahmoudnaif/College-management-system.git';
   const installRedis ='sudo apt-get install redis'
@@ -49,7 +49,7 @@ const GettingStarted = ({setactiveSection}) => {
       <ul className="list-disc">
         <li className='pb-5'>
           <p className='pb-5'>Clone the repo:</p>
-          <CodeSnippet text={cloneRepo} lang="bash"/>
+          <CodeSnippet text={cloneRepo} lang="bash" darkmode={darkmode}/>
         </li>
         <li className='pb-5'>
           <p className=' pb-5'>Change the connection string for the database from appsettings.json file</p>
@@ -62,11 +62,11 @@ const GettingStarted = ({setactiveSection}) => {
           <li className='pb-2'>Open your virtual machine</li>
           <li className='pb-5'>
             <p className='pb-2'>Install redis-server if not installed</p>
-            <CodeSnippet text={installRedis} lang="bash"/>
+            <CodeSnippet text={installRedis} lang="bash" darkmode={darkmode}/>
           </li>
           <li className='pb-5'>
             <p className='pb-2'>Run redis</p>
-            <CodeSnippet text={runRedis} lang="bash"/>
+            <CodeSnippet text={runRedis} lang="bash" darkmode={darkmode}/>
           </li>
           <li className='pb-5'>
             <p className='pb-2'>Check for redis IP</p>
@@ -84,11 +84,11 @@ const GettingStarted = ({setactiveSection}) => {
       <hr className='border-t border-black opacity-15 w-screen md:w-full  -mx-10 md:-mx-0 my-4 dark:border-white'/>
        </div>
 
-       <div className='  pt-2 md:pt-4  flex  flex-col md:flex-row justify-between'>
+       <div className='  pt-2 md:pt-4  flex  flex-col md:flex-row justify-between items-start md:items-center '>
          <p className='pb-3 md:pb-0'> Great! now you are ready to start using the API and show us your amazing front-end skills!</p>
-         <span className='flex justify-center '>
-          <button onClick ={handleNext} className='bg-headerWhite border-black border w-16 rounded hover:bg-[rgb(199,199,199)] active:bg-[rgb(142,142,142)]'>Next</button>
-        </span>
+       
+          <button onClick ={handleNext} className='mt-3 md:mt-0 bg-blue-600 hover:bg-blue-500 dark:bg-[rgb(179,199,255)] w-20 h-10 rounded dark:hover:bg-[rgb(130,148,196)] dark:active:bg-[rgb(106,120,158)]'>Next</button>
+        
        </div>
 
     </div>
