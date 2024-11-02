@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useRef } from 'react';
 import SideBar from './SideBar'
 import GettingStarted from './GettingStarted';
 import data from "../assets/JSONData/Controllers.json";
 import APIDoc from './ApiDocsSection';
+import NavigationSideBar from './NavigationSideBar';
 
 const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
   const [activeSec,setactiveSection] = useState(0);
   const [apiDocs,setApiDocs] = useState([]);
-  
-
+  const [activeBlock, setActiveBlock] = useState(0);
+  const sectionsRef = useRef([]); 
   const isDesktop = () => window.innerWidth >= 768;
 
   useEffect(() => {
@@ -34,6 +35,7 @@ const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
   }, []);
 
   useEffect(() => {
+    
     const fetchData = async () => {
       try {
         // const response = await fetch(`src/assets/JSONData/${data[activeSec-1].json}`);
@@ -47,6 +49,10 @@ const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
       }
     };
     if (activeSec === 0) {
+      setApiDocs([
+      {title:"Introduction"}
+
+      ])
       return;
     }
     if(activeSec > data.length){
@@ -56,16 +62,44 @@ const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
     fetchData();
   }, [activeSec]); 
 
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveBlock(entry.target.id);
+          }
+        });
+      },
+      { threshold: 1 }
+    );
+setTimeout(() => {
+  sectionsRef.current.forEach((section) => {
+    if (section) observer.observe(section);
+  });
+  console.log("entered")
+  console.log(sectionsRef.current)
+}, 1000);
+  
+   
+  
+    return () => {
+      observer.disconnect();
+    };
+  }, [activeSec]); 
   return (
 <>
 {  openSideBar && <SideBar activeSec={activeSec} setactiveSection={setactiveSection} data={data} setOpenSideBar={setOpenSideBar}/>}
-    <div className='flex min-h-screen pt-16 md:pl-[20%]  '>
+    <div className='flex min-h-screen pt-16 md:pl-[20%] md:w-[75%] bg-black '>
     {activeSec == 0 &&  <GettingStarted setactiveSection={setactiveSection} darkmode={darkmode} />}
-    {activeSec != 0 && <APIDoc apiDocs = {apiDocs} darkmode={darkmode} setactiveSection={setactiveSection} />}
+    {activeSec != 0 && <APIDoc apiDocs = {apiDocs} darkmode={darkmode} setactiveSection={setactiveSection} sectionsRef={sectionsRef} />}
 
-      <div className='hidden md:block md:w-[25%]  bg-black '></div>
     </div> 
+    <NavigationSideBar apiDocs={apiDocs} activeBlock={activeBlock} sectionsRef={sectionsRef} />
+
 </>
+
   )
 }
 

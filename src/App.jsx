@@ -37,7 +37,7 @@ const App = () => {
     <Route path="/Docs" element={<Docs setOpenSideBar={setOpenSideBar} openSideBar={openSideBar}  darkmode={darkmode} />} />
     <Route path="*" element={<HomePage />} /> {/* add not found page */} 
     </Routes>
-      <button onClick={()=> setDarkMode(prev => !prev)} className='fixed w-10 h-10 bottom-10 right-10 text-xs bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black font-semibold'>
+      <button onClick={()=> setDarkMode(prev => !prev)} className='z-20 fixed w-10 h-10 bottom-10 right-10 text-xs bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black font-semibold'>
         {darkmode ? "LHT" : 'DRK'}      
       </button>
     </div>

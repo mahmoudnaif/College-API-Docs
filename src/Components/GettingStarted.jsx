@@ -15,7 +15,7 @@ const GettingStarted = ({setactiveSection,darkmode}) => {
   };
   return (
     
-    <div  className= "w-full md:w-[75%] bg-mainpageWhite dark:bg-mainpageDark p-10 pt-0 md:p-20 md:pt-0">
+    <div  className= "w-full md:w-[100%] bg-mainpageWhite dark:bg-mainpageDark p-10 pt-0 md:p-20 md:pt-0">
       
      <div className='  pt-5 md:pt-10  '>
       <h1 className='text-lg md:text-4xl '>Introduction</h1>

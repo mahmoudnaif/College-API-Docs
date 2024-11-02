@@ -2,7 +2,7 @@ import React from 'react'
 import CodeSnippet from './CodeSnippet'
 import ReactJson from 'react-json-view'
 
-const APIDocBlock = ({doc,darkmode}) => {
+const APIDocBlock = ({doc,darkmode,id,sectionsRef}) => {
 
     let queryParamsString='';
     for (let param in doc.queryParameters) {
@@ -38,7 +38,7 @@ const APIDocBlock = ({doc,darkmode}) => {
     }
 
   return (
-    <> <div className="container  pb-10  pt-5">
+    <> <div  ref={(el) => (sectionsRef.current[id] = el)} id={id} className="container  pb-10  pt-5">
     <h1 className="text-xl md:text-3xl pb-7">{doc.title}</h1>
     <div className='pb-7'>
       <p className=' md:text-2xl pb-5'>Endpoint</p>
