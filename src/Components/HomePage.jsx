@@ -13,7 +13,7 @@ const HomePage = ({darkmode}) => {
         <p className=' mb-4'>The College Management System API is a robust and scalable RESTful API designed to facilitate the management of college-related data. It provides a comprehensive suite of endpoints that streamline the handling of various entities, including students, courses, enrollments, and faculty.</p>
         <div className='flex space-x-2'>
       
-                <Link to="/docs">
+                <Link to="/College-API-Docs/Docs">
                 <button className='bg-indigo-600  py-2 px-4 rounded hover:bg-indigo-700 active:bg-indigo-800'>Docs</button>
               </Link>
               <a href="https://github.com/mahmoudnaif/College-management-system" target="_blank">

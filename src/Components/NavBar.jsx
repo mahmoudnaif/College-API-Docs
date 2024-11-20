@@ -15,10 +15,10 @@ const NavBar = ({setOpenSideBar}) => {
                 <Link to="/">
                     <li  className="mr-4 hover:text-blue-300">Home</li>
                 </Link>
-                <Link to="/Docs">
+                <Link to="/College-API-Docs/Docs">
                     <li  className="mr-4 hover:text-blue-300">Docs</li>
                 </Link>
-                <Link to="/Contact">
+                <Link to="/College-API-Docs/Contact">
                     <li  className="mr-4 hover:text-blue-300">Contact</li>
                 </Link>
                 </ul>

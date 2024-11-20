@@ -39,7 +39,7 @@ const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
     const fetchData = async () => {
       try {
         // const response = await fetch(`src/assets/JSONData/${data[activeSec-1].json}`);
-        const response = await fetch(`src/assets/JSONData/${data[activeSec-1]}.json`);
+        const response = await fetch(`JSONData/${data[activeSec-1]}.json`);
         console.log(`src/assets/JSONData/${data[activeSec-1]}`)
         const result = await response.json();
         console.log(result)
@@ -50,7 +50,7 @@ const Docs = ({openSideBar,setOpenSideBar,darkmode}) => {
     };
     if (activeSec === 0) {
       setApiDocs([
-      {title:"Introduction"}
+      {title:"Introduction"},{title:"prerequisites"},{title:"Getting started"}
 
       ])
       return;
@@ -92,7 +92,7 @@ setTimeout(() => {
 <>
 {  openSideBar && <SideBar activeSec={activeSec} setactiveSection={setactiveSection} data={data} setOpenSideBar={setOpenSideBar}/>}
     <div className='flex min-h-screen pt-16 md:pl-[20%] md:w-[75%] bg-black '>
-    {activeSec == 0 &&  <GettingStarted setactiveSection={setactiveSection} darkmode={darkmode} />}
+    {activeSec == 0 &&  <GettingStarted setactiveSection={setactiveSection} darkmode={darkmode} sectionsRef={sectionsRef}/>}
     {activeSec != 0 && <APIDoc apiDocs = {apiDocs} darkmode={darkmode} setactiveSection={setactiveSection} sectionsRef={sectionsRef} />}
 
     </div> 

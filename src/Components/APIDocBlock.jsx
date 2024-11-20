@@ -51,8 +51,9 @@ const APIDocBlock = ({doc,darkmode,id,sectionsRef}) => {
     { doc.responseBody && <> <p className='text-lg md:text-2xl pb-5'>Response:</p>
     <ReactJson collapsed={true} src={doc.responseBody} name={null} theme={darkmode ? "ocean":"rjv-default"}  style={BlockStyle()}/>
   </>}
+      {doc.note && <blockquote className='text-base md:text-xl mt-5 py-1 md:py-4 pl-3 border-l-2 dark:border-headerDark'>{doc.note} </blockquote> }
   </div>
-  <hr className='border-t border-black opacity-15 w-screen md:w-auto  md:-mx-16 my-4 dark:border-white'/>
+  <hr className='border-t border-black opacity-15 w-screen md:w-auto -mx-8 md:-mx-16 md-4 dark:border-white'/>
 
     </>
   )
