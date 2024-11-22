@@ -86,7 +86,7 @@
       "numberOfElements": 1,
       "first": true,
       "empty": false
-    }
+    },"note":"This endpoint uses take and skip"
     },{
     "method": "Get",
     "endpoint":"/get/test",
